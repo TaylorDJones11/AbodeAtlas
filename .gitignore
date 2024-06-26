@@ -37,3 +37,5 @@ next-env.d.ts
 
 # theme files
 _theme_files
+
+properties.json
