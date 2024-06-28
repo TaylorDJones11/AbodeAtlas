@@ -1,16 +1,19 @@
-// route to fetch all the properties
 import connectDB from '@/config/database';
+import Property from '@/models/Property';
+
+// GET /api/properties
 
 export const GET = async (request) => {
   try {
     await connectDB();
-    // check the updated code for this
-    return Response.json({ message: 'It works' }, { status: 200 });
-    // return new Response(JSON.stringify({ message: 'Hello World' }), {
-    //   status: 200,
-    // });
+    console.log('Database connected');
+
+    // Something going on here -  not properly connecting to Mongoose - or not connecting to collection
+    const properties = await Property.find({});
+    console.log(properties);
+
+    return Response.json(properties);
   } catch (error) {
-    console.log(error);
-    return new Reponse('Something went wrong', { status: 500 });
+    return Response.json({ message: "It's an error" }, { status: 500 });
   }
 };

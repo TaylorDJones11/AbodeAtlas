@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
@@ -40,3 +41,4 @@ _theme_files
 
 properties.json
 properties_import.json
+
