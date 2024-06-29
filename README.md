@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AbodeAtlas
+
+> A web application to help you find your next rental property.
+
+## Features
+
+Here are some of the current features that Property Pulse has:
+
+- User authentication with Google & Next Auth
+- User authorization
+- Route protection
+- User profile with user listings
+- Property Listing CRUD
+- Property image upload (Multiple)
+- Property search
+- Internal messages with 'unread' notifications
+- Photoswipe image gallery
+- Mapbox maps
+- Toast notifications
+- Property bookmarking / saved properties
+- Property sharing to social media
+- Loading spinners
+- Responsive design (Tailwind)
+- Custom 404 page
+
+## Technologies Used
+
+AdobeAtlas uses the following technologies:
+
+- Next.js
+- React
+- Tailwind CSS
+- MongoDB
+- Mongoose
+- NextAuth.js
+- React Icons
+- Photoswipe
+- Cloudinary
+- Mapbox
+- React Map GL
+- React Geocode
+- React Spinners
+- React Toastify
+- React Share
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js version 18 or higher
+- MongoDB Atlas account and a cluster. Sign up and create a cluster at [MongoDB](https://www.mongodb.com/cloud/atlas)
+- Cloudinary account. Sign up at [Cloudinary](https://cloudinary.com/)
+- Google console account. Sign up at [Google Cloud](https://cloud.google.com/)
+- Mapbox account. Sign up at [Mapbox](https://www.mapbox.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### .env File
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Get your MongoDB connection string from your MongoDB Atlas cluster and add it to `MONGODB_URI`.
+- Get your Google client ID and secret from your Google console account and add them to `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
+- Add a secret to `NEXTAUTH_SECRET`. You can generate one with the following command:
+  ```sh
+  openssl rand -base64 32
