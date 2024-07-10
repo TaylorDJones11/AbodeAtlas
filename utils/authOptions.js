@@ -17,16 +17,17 @@ export const authOptions = {
   callbacks: {
     // Invoked on successful signin
     async signIn({ profile }) {
-      // 1. Connect to DB
+      // 1. Connect to database
       // 2. Check if user exists
-      // 3. If not, add user to DB
-      // 4. REturn true to allow sign in
+      // 3. If not, then add user to database
+      // Truncate user name if too long
+      // 4. Return true to allow sign in
     },
     // Modifies the session object
     async session({ session }) {
-      // 1. Get user from DB
+      // 1. Get user from database
       // 2. Assign the user id to the session
-      // 3. Return session
+      // 3. return session
     },
   },
 };
